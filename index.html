@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>test task JavaScript advanced</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="app-container pt-40">
+      <div class="top-cart">
+        <div class="top-cart-info">
+          <div class="container top-cart-info-container">
+            <span class="top-cart-info__item">
+              Товаров в корзине -
+              <span class="red-info" id="totalProducts">0</span>, на сумму
+              <span class="red-info" id="totalPrice">0</span> грн</span
+            >
+            <button class="btn-check" id="cartBtn">Оформить заказ</button>
+          </div>
+        </div>
+        <!-- /.top-cart-info -->
+      </div>
+      <!-- /.top-cart -->
+
+      <header class="top-header">
+        <div class="container">
+          <h1>Welcome to our site</h1>
+        </div>
+      </header>
+
+      <div class="wrap">
+        <section class="container">
+          <div class="filter-box">
+            <div class="select-box">
+              <label class="filter-label">Категория</label>
+              <select class="select-control" id="cats">
+                <option value="0">Все</option>
+                <option value="1">Завтраки</option>
+                <option value="2">Первые блюда</option>
+                <option value="3">Гарниры</option>
+              </select>
+            </div>
+            <!-- /.select-box -->
+            <div class="price-select-box">
+              <label class="filter-label">Цена</label>
+              <select class="select-control" id="price">
+                <option value="0">Все</option>
+                <option value="30">До 30 грн</option>
+                <option value="50">До 50 грн</option>
+                <option value="100">До 100 грн</option>
+                <option value="150">До 150 грн</option>
+              </select>
+            </div>
+            <!-- /.price-select-box -->
+          </div>
+          <!-- /filter-box-->
+
+          <div class="products-box grid-box" id="products"></div>
+          <!-- /product-box-->
+        </section>
+      </div>
+
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Корзина</h2>
+          </div>
+          <div class="modal-body">
+            <div id="cart"></div>
+            <p id="total"></p>
+            <form
+              class="modal-form"
+              onsubmit="
+            validationForm()"
+            >
+              <input
+                type="text"
+                name="fname"
+                id="name"
+                required
+                placeholder="Укажите свое имя..."
+              />
+              <input
+                type="email"
+                id="email"
+                placeholder="Укажите свой email..."
+              />
+              <input type="submit" name="submit" value="Отправить" />
+            </form>
+          </div>
+          <div class="modal-footer">
+            <h3>Нет любви более искренней, чем любовь к еде.</h3>
+          </div>
+        </div>
+      </div>
+
+      <footer class="bottom-footer bg-beetroot py-1">
+        <div class="container">
+          <div class="footer-row">
+            <div class="col-md-3">Beetroot &copy;2018</div>
+            <div class="col-md-9 text-center">
+              <a target="_blank" href="https://academy.beetroot.se/?"
+                >Bettroot academy 2018</a
+              >
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- /.app-container -->
+    <script src="data.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
